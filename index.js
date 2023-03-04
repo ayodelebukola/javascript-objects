@@ -19,6 +19,10 @@ function InstagramPost (handleOfAuthor, content, imageLink, numberOfViews, numbe
 }
 const InstagramPost2 = new InstagramPost('Foodnetworkng', 'Food', 'https://www.instagram.com/reel/CouUHgWDjIy/?utm_source=ig_web_copy_link', '2.1 Million', '900k');
 console.log(InstagramPost2);
+
+
+
+
 //Question 2.
 //Using the second method
 const InstagramPost3 = new InstagramPost('Bukkola_', 'Personal', 'https://www.instagram.com/p/CkNbqY0DiQu/', '85 Million', '871k');
@@ -41,9 +45,14 @@ function createPerson(name, age, location) {
     }
 }
 
+
+
 //Question 3a
 const musa = createPerson('Musa Dawodu', '19 years old', 'Lekki Lagos State Nigeria');
 console.log(musa);
+
+
+
 
 //Question 3b
 function createJambScores(eng, govt, lit, crk) {
@@ -72,11 +81,14 @@ const firstSong = {
     album: 'A better time',
 }
 
+
 //First Method: Using Object.assign
 //To add new song title.
 const secondSong = Object.assign({}, firstSong)
 secondSong.title = 'Jowo';
 console.log(secondSong);
+
+
 
 //Second Method: Using spread syntax.
 //To add new song.
@@ -87,9 +99,28 @@ thirdSong.song = 'The Best';
 console.log(thirdSong);
 
 
+
 //Third Method: Using JSON parse()
 //To add new song title.
 const fourthSong = JSON.parse(JSON.stringify(firstSong));
 fourthSong.song = 'Tanana';
 
 console.log(fourthSong);
+
+
+
+
+
+//Question 5
+const presidentialCandidates = {
+    AAC: 'Omoyele Sowore',
+    ACCORD: 'Christopher Imumolen',
+    APC: 'Bola Ahmed Tinubu',
+    LP: 'Peter Obi',
+    NNPP: 'Rabiu Kwankwaso',
+    PDP: 'Atiku Abubakar',
+}
+
+for (const Key of Object.keys(presidentialCandidates)){
+    console.log(presidentialCandidates[Key] + " is the presidential candidate of " + (Key) + '.');
+}
